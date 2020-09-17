@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>올리브영에 오신 것을 환영합니다</title>
+    
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    
+ 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    
+    
+    <script>
+        
+        $(document).ready(function(){
+            
+            //탑버튼 숨기기
+            $('footer a').hide();
+            
+            
+            //내비게이션 메뉴 클릭시 해당하는 컨텐츠 상단 top:58픽셀 위치에 올라오게 하기
+            $('.gnb>li').on({'click focus':function(){
+                
+                var num = $(this).index()+1;
+                console.log(num);
+                
+                //각 콘텐츠 article에 top위치값을 변수에 저장
+                var con = $('section article').eq(num).offset().top; 
+                
+                //각 콘텐츠가 스크롤 높이 58픽셀까지 상단으로 애니메이션 되면서 올라감
+                $('html, body').animate({scrollTop:con-80},500);
+            }
+            
+            });
+            
+            
+            $(window).scroll(function(){
+                
+                var sPos=$(window).scrollTop();
+                
+                $('#status').text(sPos);
+                
+                
+                if(sPos>=700){     //스크롤 높이가 700픽셀 이상이거나 같을 경우
+                $('footer a').fadeIn();   //top버튼이 서서히 보이게 하고
+            }else{  //아닐 경우 
+                $('footer a').fadeOut();  //top버튼이 서서히 사라지게 한다     
+                
+            }
+                
+                if(sPos>=80){    //스크롤58픽셀이상이라면
+                    $('nav').addClass('act');  //네비게이션 서식을 추가하여 고정시키고
+                }else{       //아닌 경우(화면을 위로 올리면)
+                    $('nav').removeClass('act');  //네비게이션 서식을 제거하여 원위치한다
+                }
+                
+                
+                
+//              
+                
+                
+                //각 해당하는 콘텐츠가 상단으로 올라오면 해당하는 메뉴에 서식을 적용하기
+                if(sPos>=652&&sPos<1400){
+                    $('.gnb a').removeClass();  //기존에 있는 서식 제거하고
+                    $('.gnb li:first-child a').addClass('on');  //첫번째 메뉴에 서식적용
+                }else if(sPos>=1417&&sPos<3330){
+                    $('.gnb a').removeClass();  //기존에 있는 서식 제거하고
+                    $('.gnb li:nth-child(2) a').addClass('on');  //두번째 메뉴에 서식적용
+                }else if(sPos>=3349&&sPos<4045){
+                    $('.gnb a').removeClass();  //기존에 있는 서식 제거하고
+                    $('.gnb li:nth-child(3) a').addClass('on');  //세번째 메뉴에 서식적용
+                }else if(sPos>=4064&&sPos<5252){
+                    $('.gnb a').removeClass();  //기존에 있는 서식 제거하고
+                    $('.gnb li:nth-child(4) a').addClass('on');  //네번째 메뉴에 서식적용
+                }else if(sPos>=5272&&sPos<6452){
+                    $('.gnb a').removeClass();  //기존에 있는 서식 제거하고
+                    $('.gnb li:nth-child(5) a').addClass('on');  //다섯번째 메뉴에 서식적용
+                }else if(sPos>=6472){
+                    $('.gnb a').removeClass();  //기존에 있는 서식 제거하고
+                    $('.gnb li:nth-child(6) a').addClass('on');  //여섯번째 메뉴에 서식적용
+                }else{$('.gnb a').removeClass('on');
+                     
+                     }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                            
+                
+            });
+            
+            
+            $('footer a').click(function(){    //top버튼 클릭시
+                    $('body, html').animate({scrollTop:'0px'},300);  //최상단으로 올리기
+                    
+                    return false;   //새로고침 방지
+            });
+            
+            
+                
+            
+        });
+        
+    </script>
+    
+    
+</head>
+<body>
+<!--   <span id="status"></span>-->
+   
+   
+<!-- 상단헤더영역 시작  -->
+    <header>
+        
+        
+        <nav>
+          <div class="h_wrap">
+           <h1><a href="index.html" title="메인페이지로 바로가기">
+        <img src="./img/index_h_1.png" alt="상단로고"></a></h1>            
+            <ul class="gnb">
+                <li><a href="#" title="ABOUT">ABOUT</a></li>
+                <li><a href="#" title="HISTORY">HISTORY</a></li>
+                <li><a href="#" title="ADVERTISING">ADVERTISING</a></li>
+                <li><a href="#" title="PARTNERSHIP">PARTNERSHIP</a></li>
+                <li><a href="#" title="LOCATION">LOCATION</a></li>
+                <li><a href="#" title="CONTACT US">CONTACT US</a></li>
+            </ul>
+            </div>           
+        </nav>
+    </header>
+    
+    
+<!--  콘텐츠영역 시작  -->
+    <section id="cont">
+        
+        <article id="visual">       
+           
+            <img src="./img/index_c_1.jpg" alt="타이틀이미지">
+            <p class="txt01"><strong>올리브영</strong>은 뷰티·헤어·바디·헬스케어 등<br> 다양한 카테고리의 제품을 한 곳에서 만나볼 수<br>있어 아름다움은 물론, 건강한 라이프스타일을 추구하는<br>고객들을 위한<strong> 헬스&뷰티 스토어입니다.</strong></p>
+            
+        </article>
+        
+        <article class="sub_con" id="about">        
+        <div class="about_txt">
+           <h3>ABOUT</h3><span></span>
+            <p>올리브영은 국내에 최적화된 헬스&뷰티 스토어 개념을 최초로 선보이며<br>1999년 1호점을 오픈한 이래, 늘 최초, 최고의 길을 걸어왔습니다.</p>
+            
+            <p>20여 년간 축적된 다양한 데이터를 기반으로, 보다 많은 이들이 더 건강하고 아름다워질 수 있도록 새로운 트렌드와 차별화된 상품을 발빠르게 큐레이션하고 있습니다. 올리브영은 전국 1,200여 개의 매장과 온라인몰, 전 세계 150여 개국에 배송되는 글로벌몰을 통해 이제 ‘대한민국 No.1 헬스&뷰티 스토어’를 넘어 전 세계인들의 ‘글로벌 라이프스타일 플랫폼’으로 거듭나고 있습니다.</p>
+        </div>
+        <div class="slogan_wrap">
+        <ul class="slogan">
+            <li><div><h4>VISION</h4><p>건강한 아름다움을<br>큐레이팅 하는 곳</p></div></li>
+            <li><div><h4>MISSION</h4><p>새로운 헬스&middot;뷰티&middot;라이프<br>스타일 상품과 쇼핑 경험을<br>큐레이션함으로써, 고객 스스로<br>일상을 건강하고 아름답게<br>가꿀 수 있도록 영감과<br>에너지를 준다.</p></div></li>
+            <li><div><h4>SLOGAN</h4><strong>ALL LIVE BETTER</strong><p>올리브영과 함께 모든 사람이<br>건강하고 싱그럽게 살아가는<br>것을 지원하는 올리브영의<br>철학을 담고 있습니다.</p></div></li>
+        </ul>
+        </div>    
+                    
+        </article>
+        
+        <article class="sub_con" id="history">
+            <h3>HISTORY</h3><span></span>
+            <img src="./img/index_c_2.jpg" alt="역사">
+        </article>
+        
+        <article class="sub_con" id="advertising">
+            <h3>ADVERTISING</h3><span></span>
+            <iframe src="https://www.youtube.com/embed/N9m-ASgF2bE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+        
+        <article class="sub_con" id="partnership">
+            <h3>PARTNERSHIP</h3><span></span>
+            <img src="./img/index_c_3.jpg" alt="partnership">
+        </article>
+        
+        <article class="sub_con" id="location">
+            <h3>LOCATION</h3><span></span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12652.759459439896!2d126.9637161900769!3d37.550590304444675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca261367264fd%3A0xe769f885cd3f241e!2z7JSo7KCc7J207Jis66as67iM7JiBIOyjvOyLne2ajOyCrA!5e0!3m2!1sko!2skr!4v1600263622054!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <img src="./img/index_c_4.jpg" alt="cj올리브영 주식회사 지도">
+        </article>
+        
+        <article class="sub_con" id="contact">
+            <h3>CONTACT US</h3><span></span>
+      <form name="email" method="post" action="contact_me1.php">
+       <fieldset>
+          
+           
+           <legend>&nbsp;</legend>
+           
+
+           
+           
+<!--       이름       -->
+           <div class="field">
+               <label for="name"></label>
+               <input type="text" name="name" id="name" placeholder="NAME">
+           </div> 
+           
+            
+<!--       이메일     -->
+           <div class="field">
+               <label for="email"></label>
+               <input type="text" name="email" id="email" placeholder="E-MAIL">
+           </div>  
+
+
+<!--       제목       -->
+           <div class="field">
+               <label for="subject"></label>
+               <input type="text" name="subject" id="subject" placeholder="SUBJECT">
+           </div>
+           
+           
+<!--       내용       -->
+           <div class="field">
+               <label for="message"></label>
+               <textarea name="message" id="message" rows="5" placeholder="MESSAGE"></textarea>
+           </div> 
+                                                                              
+                   
+<!--       보내기     -->
+           <ul>
+               <li><input type="submit" value="SEND"></li>
+           </ul>         
+                             
+                                      
+                                                        
+           
+       </fieldset>       
+   </form>
+        </article>
+        
+        
+    </section>
+    
+    
+    
+<!--  푸터영역 시작  -->
+    <footer>
+        <a href="#" title="페이지 상단으로 바로가기">TOP</a>
+        
+        <ul>
+        <li>대표이사 : 구창근 | 사업자등록번호 : 809-81-01574 | 주소 : (04323) 서울특별시 용산구 한강대로 366, 6층 (동자동, 트윈시티)</li>
+        <li>호스팅사업자 : CJ 올리브네트웍스 | 통신판매업신고번호 : 2019-서울용산-1428</li>
+        
+        </ul>
+        <address>
+        Copyright&copy; 2020 CJ OliveYoung. All Rights Reserved.</address>
+    </footer>
+    
+        
+</body>
+</html>
