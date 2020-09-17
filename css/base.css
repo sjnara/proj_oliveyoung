@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+*{padding:0px;margin:0px;}
+
+body{
+    font-family: 'Montserrat',arial,sans-serif;
+    font-size:12px;
+    color:#333;
+}
+
+a{color:#333;text-decoration: none;}
+
+ul,ol,li {list-style: none;}

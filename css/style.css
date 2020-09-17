@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+/*      상단헤더 서식  */
+header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 5000;
+}
+
+/*
+        #header_top h1{
+            width:1200px;
+            text-align: center;
+            margin: 0px auto;
+        }
+*/
+
+.h_wrap{
+    width:1000px;
+    height:80px;
+    margin: 0px auto;
+    position: relative;
+    
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    margin: 0px auto;    
+    
+    
+}
+
+nav h1 {
+    width: 235px;
+}
+
+nav h1 img {
+    width: 100%;
+    transform: translateY(20px);
+
+}
+
+
+
+.gnb {
+    width: 660px;
+    height: 80px;
+    margin: 0px auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+.gnb > li {
+    float: left;
+    padding: 0px 10px;
+    line-height: 80px;
+}
+
+
+.gnb > li:last-child {
+    padding-right: 0px;
+}
+
+.gnb > li > a {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gnb > li > a:hover {
+    color: #F2827F;
+}
+
+/*      메뉴 클릭시 해당콘텐츠가 올라오면 해당메뉴에 적용할 서식  */
+.on {
+    color: #F2827F !important;
+}
+
+
+
+/*      콘텐츠영역 서식  */
+section {
+    clear: both;
+    overflow: hidden;
+
+}
+
+
+section article:last-child{margin-bottom: 0px;}
+
+.sub_con {
+    width: 1200px;
+    margin: 30px auto;
+}
+
+section #visual {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#visual img {
+    height: 650px;
+
+}
+
+.txt01 {
+    font-size: 26px;
+    text-align: center;
+    transform: translateY(-400px);
+    line-height: 42px;
+    letter-spacing: 1px;
+
+}
+
+.txt01 strong{font-size: 35px;}
+
+
+#about{
+    margin-top: 605px;
+}
+
+.about_txt{
+    width:1000px;
+/*    text-align: center;*/
+    margin: 0px auto;
+}
+
+.about_txt>h3{
+    font-size:42px;
+    padding-top: 55px;
+    text-align: center
+}
+
+.about_txt>span{
+    display: block;
+    width:50px;height:5px;
+    background-color: #A4D233;
+    margin: 10px auto 50px auto;
+    
+}
+
+.about_txt p:first-of-type{
+    font-size:20px;
+    font-weight: bold;
+    margin: 30px 0px;
+    line-height: 26px;
+}
+
+.about_txt p:nth-of-type(2){
+    font-size:16px;
+    line-height: 22px;
+}
+
+.slogan_wrap{width:1200px;}
+
+.slogan{
+    text-align: center;
+    margin: 50px auto 0px auto;
+    
+}
+
+.slogan>li:first-child{margin-left: 101px;}
+
+
+
+.slogan>li{
+    float: left;
+    width:300px;
+    height:360px;    
+    line-height: 20px; 
+    margin-right:48px;
+    color:#fff;
+    border-radius: 20px 20px 0px 20px;
+    background-image:url('../img/index_c_6.gif');
+}
+
+.slogan>li p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.slogan li:first-child div,
+.slogan>li:nth-child(2)>div,
+.slogan>li:last-child>div{
+    transform: translateY(80px);
+}
+
+
+
+.slogan>li:first-child h4,
+.slogan>li:nth-child(2) h4,
+.slogan>li:last-child h4{
+    margin-bottom: 35px;
+}
+
+
+
+.slogan>li:last-child p{margin-top: 10px;}
+
+.slogan>li h4{
+    font-size:28px;
+    margin-bottom: 15px;
+    color:#000;
+}
+
+#about::after{
+    clear:both;
+    display: block;
+    content: "";
+}
+
+
+
+#history{
+    margin-top: 100px;
+    text-align: center;
+}
+
+#history>h3{
+    
+    font-size:42px;
+}
+
+#history>span{
+    display: block;
+    width:50px;height:5px;
+    background-color: #A4D233;
+    margin: 10px auto 50px auto;
+    
+}
+
+
+#advertising{
+    margin-top: 90px;
+    text-align: center;
+    
+}
+
+#advertising>h3{
+    
+    font-size:42px;
+}
+
+#advertising>span{
+    display: block;
+    width:50px;height:5px;
+    background-color: #A4D233;
+    margin: 10px auto 50px auto;
+    
+}
+
+#advertising iframe{width:1000px;height:510px;}
+
+
+
+
+#partnership{
+    margin-top: 95px;
+    text-align: center;
+}
+
+#partnership>h3{
+    
+    font-size:42px;
+}
+
+#partnership>span{
+    display: block;
+    width:50px;height:5px;
+    background-color: #A4D233;
+    margin: 10px auto 50px auto;
+    
+}
+
+#partnership img{width:1000px;}
+
+
+
+
+
+#location{
+    margin-top: 90px;
+    text-align: center;
+}
+
+#location>h3{
+    
+    font-size:42px;
+}
+
+#location>span{
+    display: block;
+    width:50px;height:5px;
+    background-color: #A4D233;
+    margin: 10px auto 50px auto;
+    
+}
+
+#location iframe{width:1000px;height:450px;}
+#location>img{
+    margin-top: 45px;
+    width:1000px;
+}
+
+
+
+#contact{
+    margin-top: 90px;
+    padding-top:85px;
+    text-align: center;
+    width:100%;
+    height:750px;
+    background-color: #a4d233;
+    background-image: url('../img/index_c_5.gif');
+}
+
+#contact>h3{
+    
+    font-size:42px;
+}
+
+#contact>span{
+    display: block;
+    width:50px;height:5px;
+    background-color: #fff;
+    margin: 10px auto 30px auto;
+    
+}
+
+#contact form{
+    width:850px;
+    height:535px;
+    background-color: #fff;
+    margin: 0px auto;
+    box-shadow: 5px 5px 10px #7b7b7b;
+    border-radius: 30px;
+    padding-top: 40px;
+}
+
+#contact input[type=text]{
+    width:400px;
+    height:30px;
+    padding:5px 5px 5px 15px;
+    border-radius: 10px;
+    border:2px solid #d6d6d6;
+    margin-bottom: 15px;
+    text-align: left;
+    font-family: 'Montserrat',arial,sans-serif;
+    font-size: 14px;
+}
+
+#contact textarea{
+    width:405px;
+    height: 195px;
+    border-radius: 10px;
+    border:2px solid #d6d6d6;
+    margin-bottom: 20px;
+    padding-top:10px;
+    padding-left:15px;
+    font-family: 'Montserrat',arial,sans-serif;
+    font-size: 14px;
+}
+
+
+
+#contact input[type=submit]{
+    width:425px;
+    height:50px;
+    border-radius: 10px;
+    border:none;
+    background-color: #F2827F;    
+    font-size: 20px;
+    color:#fff;
+    font-family: 'Montserrat',arial,sans-serif;
+}
+
+
+/*      푸터영역 서식  */
+footer {
+    width: 100%;
+    height: 125px;
+    background-color: #404040;
+    text-align: center;
+}
+
+footer>ul{
+    width:1200px;
+    margin: 0px auto;
+    padding-top: 25px;
+    color:#fff;
+    line-height: 22px;
+    
+}
+
+footer>ul>li{
+    font-size: 14px;
+    padding-bottom: 0px;
+    
+}
+
+/*
+footer li:first-child{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+*/
+
+footer > address {
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+footer a {
+    background-color: #404040;
+    color: #fff;
+    font-size: 20px;
+    padding: 30px 20px;
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+/*
+#status{
+    background-color: #00f;
+    color:#fff;
+    position: fixed;
+    top:50px;right:50px;
+    font-size: 16px;
+    z-index: 9999;
+}
+*/
+
+
+
+
+
+/*      헤더 네비게이션 추가서식  */
+.act {
+    position: fixed;
+    top: 0px;left:0px;
+    width:100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, .8);
+}
